@@ -28,12 +28,36 @@ void print_help(char *program_name) {
 
 // Ej 1: Funtion that finds the peak on the array, if it does not exist, return -1
 int array_peak_sequential(int a[], unsigned int length) {
+
+    int t, i = 1;
+    int j = length;
+
+    if (a[i] > a[i+1]){
+        
+        t = 1;
+    } 
+    else if (a[j] > a[j-1]) {
+        
+        t = j;
+    }
+    for (i=2 ; i < j ; i++) {
+
+        if (a[i-1] < a[i] && a[i] > a[i+1]) {
+        
+          t= a[i];
+        }
+
+        else t = -1;
+
+    }
   //please change whatever you need here to make it work.
-  return 0;
+  return t;
+
 }
 
 // Ej 2: Funtion that finds the peak on the array, if it does not exist, return -1
 int array_peak_binary(int a[], unsigned int length) {
+
   //please change whatever you need here to make it work.
   return 0;
 }
@@ -76,3 +100,12 @@ int main(int argc, char *argv[]) {
 
   return (1);
 }
+
+/* 
+Para compilar: gcc​-Wall -Werror -Wextra -pedantic -std=c99 -c array_helpers.c
+gcc​-Wall -Werror -Wextra -pedantic -std=c99 -o lab_extra *.o main.c
+Para ejecutar:./lab_extra​​../input/example-unsorted.in o cualquiera de los archivos de prueba
+
+
+
+*/
