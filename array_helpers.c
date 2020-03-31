@@ -76,3 +76,6 @@ unsigned int array_from_file(int array[],
     fclose(file);
     return (size);
 }
+
+// test
+// we
