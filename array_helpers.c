@@ -80,6 +80,3 @@ unsigned int array_from_file(int array[],
 
 
 // test
-// we
-//we
-//we
