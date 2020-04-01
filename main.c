@@ -134,5 +134,5 @@ int main() {
    cout<<"\nThe peak element of the given array is: "<<p;
    return 0;
 }
-
+k
 */
